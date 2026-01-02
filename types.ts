@@ -17,7 +17,7 @@ export interface Category {
   name: string;
   color: string;
   ownerEmail: string;
-  members: string[]; // List of emails
+  members: string[]; // List of emails who have access
 }
 
 export type TaskStatus = 'backlog' | 'todo' | 'in-progress' | 'review' | 'done';
@@ -30,7 +30,7 @@ export interface Todo {
   status: TaskStatus;
   createdAt: number;
   deadline?: number;
-  assignedTo?: string;
+  assignedTo?: string; // Email of the assignee
 }
 
 export interface NoteTodo {
